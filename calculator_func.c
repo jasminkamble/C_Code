@@ -69,7 +69,7 @@ int div(int a,int b){
 //     {
 //         if(move% 2==1)
 //         {
-//             printf("\n Player 1(X):");
+            // printf("\n Player 1(X):");
 //             symbol='X';
 //         }
 //         else
