@@ -33,10 +33,7 @@ int main() {
     return 0;
 }
 
-Output
-
-1 2 3 4 5
-3. Print Numbers from N to 1
+ Print Numbers from N to 1
 #include <stdio.h>
 
 void printReverse(int n) {
