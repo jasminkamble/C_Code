@@ -1,23 +1,23 @@
-#include<stdio.h>
-int main()
-{
-    char lowercase_vowel,uppercase_vowel;
-    char ch;
-    printf("Enter a character:");
-    scanf("%c",&ch);
+// #include<stdio.h>
+// int main()
+// {
+//     char lowercase_vowel,uppercase_vowel;
+//     char ch;
+//     printf("Enter a character:");
+//     scanf("%c",&ch);
 
 
-    lowercase_vowel=(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u');
+//     lowercase_vowel=(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u');
     
-    uppercase_vowel=(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U');
-    if(lowercase_vowel||uppercase_vowel){
+//     uppercase_vowel=(ch=='A'||ch=='E'||ch=='I'||ch=='O'||ch=='U');
+//     if(lowercase_vowel||uppercase_vowel){
     
-        printf("The character is vowel=%c",ch);
-    }
-    else
-    printf("The character is consonant=%c",ch);
-    return 0;
-}
+//         printf("The character is vowel=%c",ch);
+//     }
+//     else
+//     printf("The character is consonant=%c",ch);
+//     return 0;
+// }
 
 
 
@@ -187,20 +187,45 @@ int main()
 
 //C Program to Generate Multiplication Table
 
-#include<stdio.h>
-int main()
-{
-    int j,k;
-    j=1;
-    printf("Enter number:");
-    scanf("%d",&k);
+// #include<stdio.h>
+// int main()
+// {
+//     int j,k;
+//     j=1;
+//     printf("Enter number:");
+//     scanf("%d",&k);
 
-    do{
-        printf("\n%d*%d=%d",k,j,k*j);
-        j++;
+//     do{
+//         printf("\n%d*%d=%d",k,j,k*j);
+//         j++;
 
-    }
-    while(j<=10);
-    return 0;
+//     }
+//     while(j<=10);
+//     return 0;
     
+// }
+
+
+#include<stdio.h>
+
+// Recursive function to count even digits
+int countEvenDigits(int n) {
+    if (n == 0)  // Base case: no more digits
+        return 0;
+    int lastDigit = n % 10;
+    if (lastDigit % 2 == 0)
+        return 1 + countEvenDigits(n / 10);  // Count this digit + remaining
+    else
+        return countEvenDigits(n / 10);      // Skip this digit, check remaining
+}
+
+int main() {
+    int number;
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    int result = countEvenDigits(number);
+    printf("Number of even digits in %d is %d\n", number, result);
+
+    return 0;
 }
